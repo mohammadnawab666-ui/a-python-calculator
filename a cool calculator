@@ -1,12 +1,13 @@
-while True: # wraps it in a while true loop so it you can message the output multiple times warning: this may use a lot of ram always make sure to stop the session every few>
-    operation = input("Choose operation (1 for Add, 2 for Subtract 3 for multiplication 4 for division): ") # this says 1 = addition 2 = subtraction 3 = multiplication
-# 4 = division
+
+while True: # wraps it in a while true loop so it you can message the output multiple times warning: this may use a lot of ram always make sure to stop the sessio>
+    operation = input("Choose operation (1 for Add, 2 for Subtract 3 for multiplication 4 for division 5 = multiplication and division ") # this says 1 = addition>
+# 4= division
     num1 = float(input("Enter first number: ")) # what the float input means is so you can feed it decimals (.)
     num2 = float(input("Enter second number: ")) # the ("enter second number: ")) means is it says enter 1st, 2nd, 3rd, and 4th number
     num3 = float(input("enter third number: "))
     num4 = float(input("enter fourth number: "))
     if operation == '1': # what this means is if the user types 1 so addition it says : and : means do in python
-        result = round(num1 + num2 + num3 + num4, 2) # so the previous line said : and : means do so its supposed to do this and what this is it says to round num1 num2 num3>
+        result = round(num1 + num2 + num3 + num4, 2) # so the previous line said : and : means do so its supposed to do this and what this is it says to round num>
         print(f"Result: {result:,}")
     elif operation == '2':  # so it says elif the user types 2 then it subtracts
         result = round(num1 - num2 - num3 - num4, 2) # what it does is it subtracts  num1 by  num2 num3 and num4
@@ -15,10 +16,14 @@ while True: # wraps it in a while true loop so it you can message the output mul
         result = round(num1 * num2 * num3 * num4, 2)
         print(f"Result: {result:,}")
     elif operation == '4': # now if the user types 4 then it divides
-        if num2 != 0 and num3 != 0 and num4 != 0:
+        if num1 != 0 and num2 != 0 and num3 != 0 and num4 != 0:
             result = round(num1 / num2 / num3 / num4, 2)
             print(f"Result: {result:,}")
         else:
             print("Cannot divide by zero!")
-    else:
-        print("invalid choice")
+    elif operation == '5':
+        if num3 != 0:
+            result = round(num1 * num2 / num3 * num4, 2)
+            print(f"Result: {result:,}")
+        else:
+            print("Cannot divide by zero!")
